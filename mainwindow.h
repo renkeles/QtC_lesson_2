@@ -26,6 +26,12 @@ private slots:
 
     void on_pushButton_clicked();
 
+    void on_pushButton_up_clicked();
+
+    void on_pushButton_down_clicked();
+
+    void on_pushButton_add_clicked();
+
 private:
     Ui::MainWindow *ui;
     ParseText *parseText;

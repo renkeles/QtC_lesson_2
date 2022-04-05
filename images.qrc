@@ -6,5 +6,6 @@
         <file>images/js.png</file>
         <file>images/php.png</file>
         <file>images/c++.png</file>
+        <file>images/default.png</file>
     </qresource>
 </RCC>

@@ -76,7 +76,7 @@
      <string>Удалить</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
+   <widget class="QPushButton" name="pushButton_up">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -89,7 +89,7 @@
      <string>Вверх</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_3">
+   <widget class="QPushButton" name="pushButton_down">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -115,7 +115,7 @@
      <enum>Qt::Horizontal</enum>
     </property>
    </widget>
-   <widget class="QLineEdit" name="lineEdit">
+   <widget class="QLineEdit" name="lineEdit_add">
     <property name="geometry">
      <rect>
       <x>20</x>
@@ -125,7 +125,7 @@
      </rect>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_4">
+   <widget class="QPushButton" name="pushButton_add">
     <property name="geometry">
      <rect>
       <x>250</x>
@@ -145,7 +145,7 @@
      <x>0</x>
      <y>0</y>
      <width>344</width>
-     <height>21</height>
+     <height>20</height>
     </rect>
    </property>
   </widget>
