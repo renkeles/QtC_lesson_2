@@ -1,6 +1,7 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QStandardItemModel>
+#include <QTableView>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -20,6 +21,25 @@ MainWindow::MainWindow(QWidget *parent)
     model->appendRow(new QStandardItem(QIcon(":/icons/images/c-sharp.png"), "C#"));
     model->appendRow(new QStandardItem(QIcon(":/icons/images/php.png"), "PHP"));
     model->appendRow(new QStandardItem(QIcon(":/icons/images/js.png"), "JavaScript"));
+
+    table_model = new QStandardItemModel(this);
+
+    //table_model->setHeaderData(0, Qt::Horizontal, "NamePC");
+    //table_model->setHeaderData(1, Qt::Horizontal, "IP");
+    //table_model->setHeaderData(2, Qt::Horizontal, "MAC");
+
+    QStringList headerLabels;
+    headerLabels << "NamePC" << "IP" << "MAC";
+    table_model->setHorizontalHeaderLabels(headerLabels);
+
+    ui->tableView->setSelectionMode(QAbstractItemView::MultiSelection);
+    ui->tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+
+    table_model->appendRow({new QStandardItem("PC1"), new QStandardItem("192.168.2.161"), new QStandardItem("F0:98:9D:00:00:00")});
+    table_model->appendRow({new QStandardItem("PC2"), new QStandardItem("192.168.2.162"), new QStandardItem("F1:87:9B:00:00:00")});
+    table_model->appendRow({new QStandardItem("PC3"), new QStandardItem("192.168.2.163"), new QStandardItem("F1:87:9A:00:00:00")});
+
+    ui->tableView->setModel(table_model);
 }
 
 MainWindow::~MainWindow()
@@ -87,5 +107,20 @@ void MainWindow::on_pushButton_add_clicked()
     {
         model->insertRow(0, new QStandardItem(QIcon(":/icons/images/default.png"), str));
     }
+}
+
+
+void MainWindow::on_pushButton_color_clicked()
+{
+    QModelIndexList selected = ui->tableView->selectionModel()->selectedIndexes();
+    if(!selected.isEmpty())
+    {
+        int idx = selected.first().row();
+        for(int i = 0; i < ui->tableView->model()->columnCount(); ++i)
+        {
+            ui->tableView->model()->setData(ui->tableView->model()->index(idx, i), QColor(Qt::green), Qt::BackgroundRole);
+        }
+    }
+
 }
 

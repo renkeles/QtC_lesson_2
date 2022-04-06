@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>344</width>
-    <height>522</height>
+    <width>341</width>
+    <height>634</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -138,14 +138,37 @@
      <string>Добавить</string>
     </property>
    </widget>
+   <widget class="QTableView" name="tableView">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>371</y>
+      <width>301</width>
+      <height>181</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="pushButton_color">
+    <property name="geometry">
+     <rect>
+      <x>241</x>
+      <y>566</y>
+      <width>80</width>
+      <height>23</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Цвет</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>344</width>
-     <height>20</height>
+     <width>341</width>
+     <height>21</height>
     </rect>
    </property>
   </widget>

@@ -7,6 +7,7 @@
 
 
 
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,10 +33,13 @@ private slots:
 
     void on_pushButton_add_clicked();
 
+    void on_pushButton_color_clicked();
+
 private:
     Ui::MainWindow *ui;
     ParseText *parseText;
     QStandardItemModel *model;
+    QStandardItemModel *table_model;
 
 };
 #endif // MAINWINDOW_H
